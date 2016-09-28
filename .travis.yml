@@ -10,4 +10,6 @@ install:
   - mvn clean compile -DskipTests
   - mvn test
   - mvn install -DskipTests -Pdefault,docker
+
+after_success:
   - mvn deploy -DskipTests -Pdefault,docker
