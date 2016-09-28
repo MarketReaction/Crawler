@@ -2,8 +2,10 @@ language: java
 jdk:
   - oraclejdk8
 sudo: required
+
 services:
   - docker
+
 install:
   - mvn clean compile -DskipTests
   - mvn test
