@@ -1,1 +1,1 @@
-[![Build Status](https://travis-ci.org/MarketReaction/CommonFunctions.svg?branch=master)](https://travis-ci.org/MarketReaction/CommonFunctions)
+[![Build Status](https://travis-ci.org/MarketReaction/Crawler.svg?branch=master)](https://travis-ci.org/MarketReaction/Crawler)
