@@ -11,6 +11,8 @@ install:
   - mvn test
   - docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
   - mvn install -DskipTests -Pdefault,docker
+  - mvn deploy -DskipTests -Pdocker
 
 after_success:
-  - mvn deploy -DskipTests -Pdocker
+  - docker tag -f marketreaction/crawler:TRAVIS_BUILD_NUMBER marketreaction/crawler:latest
+  - docker push marketreaction/crawler:latest
