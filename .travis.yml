@@ -14,5 +14,5 @@ install:
   - mvn deploy -DskipTests -Pdocker
 
 after_success:
-  - docker tag -f marketreaction/crawler:TRAVIS_BUILD_NUMBER marketreaction/crawler:latest
+  - docker tag marketreaction/crawler:TRAVIS_BUILD_NUMBER marketreaction/crawler:latest
   - docker push marketreaction/crawler:latest
