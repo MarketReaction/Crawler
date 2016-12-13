@@ -96,6 +96,8 @@ public class CrawlerListener implements MessageListener {
         if (message instanceof TextMessage) {
             final TextMessage textMessage = (TextMessage) message;
             try {
+                message.acknowledge();
+
                 final Story story = mapper.readValue(textMessage.getText(), Story.class);
 
                 Source source = sourceRepository.findOne(story.getParentSource());
